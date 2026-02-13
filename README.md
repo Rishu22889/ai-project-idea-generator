@@ -1,4 +1,4 @@
-# AI Project Idea Generator 🚀
+# AI Project Idea Generator 
 
 **AI Project Idea Generator** is a web-based application designed to help engineering students and early-career developers discover structured, realistic, and career-aligned project ideas. 
 
@@ -6,7 +6,7 @@ By leveraging the power of **LLM API**, the system transforms vague career goals
 
 ---
 
-## ❓ Problem Statement
+## Problem Statement
 Many students face "blank page syndrome" when trying to build a portfolio. Existing resources like blog lists are often too generic, and random AI prompts lack the structure needed for a professional resume. 
 
 This tool bridges the gap by providing:
@@ -16,20 +16,7 @@ This tool bridges the gap by providing:
 
 ---
 
-## ⚙️ System Architecture
-
-
-
-The application follows a simple, decoupled request-response flow:
-1.  **User Input:** Form-based data (Skill level, Domain, Goals).
-2.  **Flask Backend:** Processes input and constructs a structured prompt.
-3.  **API:** Generates ideas following a strict JSON schema.
-4.  **Validation:** Backend ensures the AI response is valid JSON.
-5.  **Frontend:** Dynamically renders the results into "Project Cards."
-
----
-
-## 🏗 Tech Stack
+## Tech Stack
 * **Backend:** Python, Flask
 * **Frontend:** HTML5, Tailwind
 * **AI Layer:** LLM API
@@ -37,7 +24,7 @@ The application follows a simple, decoupled request-response flow:
 
 ---
 
-## ✨ Features (MVP)
+## Features (MVP)
 - [x] **Dynamic Input:** Collects skill level, domain, and career goals.
 - [x] **Strict JSON Schema:** Ensures AI output always matches the UI requirements.
 - [x] **Project Cards:** Visually clean display of 3 unique project ideas.
@@ -45,10 +32,10 @@ The application follows a simple, decoupled request-response flow:
 
 ---
 
-## 📥 Installation
+## Installation
 *(To be Completed)*
 
-## ▶️ How to Run
+## How to Run
 *(To be Completed)*
 
 ## Architecture / System Design
