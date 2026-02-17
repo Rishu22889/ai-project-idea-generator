@@ -5,20 +5,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gradient-to-br from-indigo-500 to-purple-600 min-h-screen flex items-center justify-center">
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen flex items-center justify-center">
 
-<div class="bg-white w-96 p-8 rounded-2xl shadow-2xl">
+<div class="bg-gray-800 text-white w-96 p-8 rounded-2xl shadow-2xl border border-gray-700">
 
-    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">
+    <h1 class="text-3xl font-bold text-center text-white mb-6">
         Calculator
     </h1>
 
     <form method="POST" class="space-y-4">
 
         <div>
-            <label class="text-sm text-gray-600">Operation</label>
+            <label class="text-sm text-gray-300">Operation</label>
             <select name="operation"
-                    class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 focus:outline-none">
+                    class="w-full mt-1 p-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:outline-none text-white">
                 <option value="add">Add</option>
                 <option value="subtract">Subtract</option>
                 <option value="multiply">Multiply</option>
@@ -27,42 +27,42 @@
         </div>
 
         <div>
-            <label class="text-sm text-gray-600">First Number</label>
+            <label class="text-sm text-gray-300">First Number</label>
             <input type="number" step="any" name="num1"
-                   class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 focus:outline-none">
+                   class="w-full mt-1 p-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:outline-none text-white">
         </div>
 
         <div>
-            <label class="text-sm text-gray-600">Second Number</label>
+            <label class="text-sm text-gray-300">Second Number</label>
             <input type="number" step="any" name="num2"
-                   class="w-full mt-1 p-2 border rounded-lg focus:ring-2 focus:ring-indigo-400 focus:outline-none">
+                   class="w-full mt-1 p-2 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-400 focus:outline-none text-white">
         </div>
 
         <button type="submit"
-                class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-200">
+                class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-200 font-semibold">
             Calculate
         </button>
 
     </form>
 
     {% if result is not none %}
-        <div class="mt-6 p-3 bg-green-100 text-green-700 rounded-lg font-semibold text-center">
+        <div class="mt-6 p-3 bg-green-900 text-green-300 rounded-lg font-semibold text-center border border-green-700">
             Result: {{ result }}
         </div>
     {% endif %}
 
     {% if error %}
-        <div class="mt-6 p-3 bg-red-100 text-red-700 rounded-lg font-semibold text-center">
+        <div class="mt-6 p-3 bg-red-900 text-red-300 rounded-lg font-semibold text-center border border-red-700">
             {{ error }}
         </div>
     {% endif %}
 
     {% if history %}
         <div class="mt-6">
-            <h2 class="font-semibold text-gray-700 mb-2">History (Last 5)</h2>
+            <h2 class="font-semibold text-gray-300 mb-2">History (Last 5)</h2>
             <ul class="text-sm space-y-2">
                 {% for item in history %}
-                    <li class="bg-gray-100 p-2 rounded-md">{{ item }}</li>
+                    <li class="bg-gray-700 p-2 rounded-md border border-gray-600">{{ item }}</li>
                 {% endfor %}
             </ul>
         </div>
